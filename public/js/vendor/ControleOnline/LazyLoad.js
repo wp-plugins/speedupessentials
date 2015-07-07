@@ -121,17 +121,9 @@ var lazyLoad = function () {
     }
     lazyLoader.init();
 };
-
-if (document.readyState === "complete") {
+document.addEventListener("DOMContentLoaded", function () {
     lazyLoad();
-} else {
-    window.onload = function () {
-        lazyLoad();
-    };
-
-}
-
-
+});
 var localCache = {
     /**
      * timeout for cache in millis
